@@ -2,7 +2,7 @@
   "name": "nuxt.js",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "generate": "nuxt generate",
     "start": "nuxt start"
   },
