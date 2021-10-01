@@ -5,6 +5,7 @@
 
 ```
 npm install nuxt
+npm install --save-dev @nuxtjs/vuetify
 ```
 
 ## Deploying to Vercel
@@ -15,9 +16,8 @@ npm install nuxt
   https://www.contentful.com/developers/docs/javascript/tutorials/integrate-contentful-with-vue-and-nuxt/
 
 ```
-npm install @nuxtjs/vuetify -D
+npm install --save-dev dotenv
 npm install --save contentful @contentful/rich-text-html-renderer
-npm install dotenv
 ```
 
 
