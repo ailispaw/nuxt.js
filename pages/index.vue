@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <img src="~/assets/img/Augmented-Idea-Studio.png" alt="Augmented Idea Studio">
-
-    <section class="container">
-      <ul>
-        <li v-for="entry in entries" :key="entry.title">
-          <h3>{{ entry.title }}</h3>
-          <div v-html="entry.content"></div>
-        </li>
-      </ul>
-    </section>
-
-  </div>
+  <v-row>
+    <v-col>
+      <AiSLogo />
+      
+      <v-card>
+        <v-list>
+          <v-list-item v-for="entry in entries" :key="entry.title">
+            <v-list-item-content>
+              <v-list-item-title>{{ entry.title }}</v-list-item-title>
+              <v-list-item-subtitle v-html="entry.content"></v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

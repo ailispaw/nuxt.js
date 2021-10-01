@@ -2,6 +2,7 @@
 
 ## Manual Installation
 - https://nuxtjs.org/docs/get-started/installation#manual-installation
+- https://vuetifyjs.com/en/getting-started/installation/#nuxt-install
 
 ```
 npm install nuxt
@@ -25,3 +26,13 @@ npm install --save contentful @contentful/rich-text-html-renderer
 - https://www.contentful.com/developers/docs/concepts/webhooks/
 - `https://app.contentful.com/spaces/<SPACE-ID>/settings/webhooks`
 - https://vercel.com/docs/concepts/git/deploy-hooks#creating-a-deploy-hook
+
+## SASS
+- https://nuxtjs.org/docs/configuration-glossary/configuration-css/
+- https://github.com/nuxt-community/vuetify-module
+- https://vuetifyjs.com/en/getting-started/installation/#nuxt-install
+- https://vuetifyjs.com/en/features/sass-variables/#nuxt-install
+
+```
+npm install --save-dev sass sass-loader@10 fibers
+```
