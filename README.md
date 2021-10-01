@@ -16,7 +16,7 @@ npm install nuxt
 
 ```
 npm install @nuxtjs/vuetify -D
-npm install --save contentful
+npm install --save contentful @contentful/rich-text-html-renderer
 npm install dotenv
 ```
 

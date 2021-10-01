@@ -6,8 +6,9 @@
 
     <section class="container">
       <ul>
-        <li v-for="entry in entries">
-          <p>{{ entry.fields.title }}</p>
+        <li v-for="entry in entries" :key="entry.title">
+          <h3>{{ entry.title }}</h3>
+          <div v-html="entry.content"></div>
         </li>
       </ul>
     </section>
@@ -17,6 +18,7 @@
 
 <script>
   import { createClient } from '~/plugins/contentful.js'
+  import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
   const client = createClient()
 
@@ -26,9 +28,16 @@
       return client.getEntries({
         content_type: env.CTF_CONTENT_TYPE_ID,
         order: '-fields.published'
-      }).then(( res ) => {
+      }).then( res  => {
+        let entries = []
+        res.items.forEach( item => {
+          entries.push({
+            title: item.fields.title,
+            content: documentToHtmlString( item.fields.content )
+          })
+        });
         return {
-          entries: res.items
+          entries: entries
         }
       }).catch( console.error )
     }
