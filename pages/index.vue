@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1>Augmented Idea Studio</h1>
-
-    <h2>coming soon!</h2>
+    <img src="~/assets/img/Augmented-Idea-Studio.png" alt="Augmented Idea Studio">
 
     <section class="container">
       <ul>
