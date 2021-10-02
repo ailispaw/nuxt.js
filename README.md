@@ -36,3 +36,12 @@ npm install --save contentful @contentful/rich-text-html-renderer
 ```
 npm install --save-dev sass sass-loader@10 fibers
 ```
+
+## Nuxt/Image
+- https://image.nuxtjs.org/getting-started/installation
+- https://www.netlify.com/blog/2021/06/11/nuxt-image-is-here-and-its-a-game-changer/
+- https://image.nuxtjs.org/api/options#screens
+
+```
+npm install --save-dev @nuxt/image
+```
