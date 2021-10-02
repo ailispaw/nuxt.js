@@ -28,7 +28,9 @@ const config = {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    // https://image.nuxtjs.org/
+    '@nuxt/image'
   ],
 
   // Environment variables: https://nuxtjs.org/docs/configuration-glossary/configuration-env
