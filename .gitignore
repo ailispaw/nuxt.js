@@ -10,5 +10,8 @@ node_modules/
 # Nuxt generate
 dist
 
+# Service worker
+sw.*
+
 # macOS
 .DS_Store
