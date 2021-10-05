@@ -1,5 +1,8 @@
 {
   "name": "nuxt.js",
+  "version": "0.0.1",
+  "description": "Augmented Idea Studio",
+  "author": "A.I. <ailis@paw.zone> (https://ailis.paw.zone/)",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt generate",
