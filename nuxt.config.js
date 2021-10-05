@@ -12,6 +12,10 @@ const config = {
     ]
   },
 
+  pwa: {
+    icon: true
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/main.scss'
@@ -30,7 +34,9 @@ const config = {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     // https://image.nuxtjs.org/
-    '@nuxt/image'
+    '@nuxt/image',
+    // https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
 
   // Environment variables: https://nuxtjs.org/docs/configuration-glossary/configuration-env

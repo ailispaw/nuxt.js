@@ -45,3 +45,10 @@ npm install --save-dev sass sass-loader@10 fibers
 ```
 npm install --save-dev @nuxt/image
 ```
+
+## Nuxt/PWA
+- https://pwa.nuxtjs.org/
+
+```
+npm install --save-dev @nuxtjs/pwa
+```
