@@ -11,7 +11,15 @@
         rounded
       >
         <template v-for="locale in this.$i18n.locales">
-          <v-btn :key="locale" :value="locale">{{ locale.toUpperCase() }}</v-btn>
+          <v-btn
+            :key="locale"
+            :value="locale"
+            elevation="1"
+            min-width="42"
+            small
+          >
+            {{ locale }}
+          </v-btn>
         </template>
       </v-btn-toggle>
     </v-app-bar>
