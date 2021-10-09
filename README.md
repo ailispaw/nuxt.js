@@ -52,3 +52,10 @@ npm install --save-dev @nuxt/image
 ```
 npm install --save-dev @nuxtjs/pwa
 ```
+
+## Multi Language
+- https://i18n.nuxtjs.org/
+
+```
+npm install --save-dev @nuxtjs/i18n
+```

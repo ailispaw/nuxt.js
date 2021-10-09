@@ -25,9 +25,10 @@
 
   export default {
     // `env` is available in the context object
-    asyncData ({ env }) {
+    asyncData ({ app, env }) {
       return client.getEntries({
         content_type: env.CTF_CONTENT_TYPE_ID,
+        locale: ( app.i18n.locale === 'en' ? 'en-US' : app.i18n.locale ),
         order: '-fields.published'
       }).then( res  => {
         let entries = []

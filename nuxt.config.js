@@ -46,6 +46,12 @@ const config = {
     '@nuxtjs/pwa'
   ],
 
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n',
+  ],
+
   // Environment variables: https://nuxtjs.org/docs/configuration-glossary/configuration-env
   env: {
     CTF_SPACE_ID:        process.env.CTF_SPACE_ID,
@@ -57,6 +63,11 @@ const config = {
   vuetify: {
     customVariables: [ '~/assets/css/variables.scss' ],
     treeShake: true
+  },
+
+  i18n: {
+    locales: [ 'en', 'ja' ],
+    defaultLocale: 'en'
   }
 }
 
