@@ -2,7 +2,11 @@
   <v-app>
     <v-app-bar app dense clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Augmented Idea Studio</v-app-bar-title>
+      <nuxt-link :to="localePath('/')">
+        <v-layout align-end>
+          <AiSLogo-48 />
+        </v-layout>
+      </nuxt-link>
       <v-spacer></v-spacer>
       <v-btn-toggle
         v-model="locale"
@@ -24,8 +28,14 @@
       </v-btn-toggle>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app clipped>
-      <!-- -->
+    <v-navigation-drawer v-model="drawer" app clipped stateless width="128">
+      <v-list nav>
+        <v-list-item link>
+          <v-list-item-content>
+            <v-list-item-title><nuxt-link :to="localePath('/')">Home</nuxt-link></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
 
     <v-main>
