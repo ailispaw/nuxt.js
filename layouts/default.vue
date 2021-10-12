@@ -47,6 +47,26 @@
     <v-footer app>
       <span>Copyright &copy; {{ new Date().getFullYear() }} Augmented Idea Studio.</span>
     </v-footer>
+
+    <v-tooltip top>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          class="github"
+          href="https://github.com/ailispaw/nuxt.js"
+          target="_blank"
+          fab
+          fixed
+          bottom
+          right
+          small
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>fab fa-github fa-2x</v-icon>
+        </v-btn>
+      </template>
+      <span>View on GitHub</span>
+    </v-tooltip>
   </v-app>
 </template>
 
@@ -73,5 +93,10 @@
 
   .v-btn-toggle {
     color: #{$logo-top-color} !important;
+  }
+
+  .v-btn.github {
+    background-color: #{$logo-bottom-color} !important;
+    color: #fff !important;
   }
 </style>

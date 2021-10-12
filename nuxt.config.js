@@ -30,7 +30,10 @@ const config = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/contentful.js' }
+    // https://www.contentful.com/developers/docs/javascript/tutorials/integrate-contentful-with-vue-and-nuxt/
+    { src: '~/plugins/contentful.js' },
+    // https://vuetifyjs.com/en/features/icon-fonts/#font-awesome-5-icons
+    { src: '~/plugins/vuetify.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
