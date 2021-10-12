@@ -62,7 +62,7 @@
           v-bind="attrs"
           v-on="on"
         >
-          <v-icon>fab fa-github fa-2x</v-icon>
+          <v-icon>mdi-github</v-icon>
         </v-btn>
       </template>
       <span>View on GitHub</span>
