@@ -15,16 +15,21 @@
         mandatory
         rounded
       >
-        <template v-for="locale in this.$i18n.locales">
-          <v-btn
-            :key="locale"
-            :value="locale"
-            elevation="1"
-            min-width="42"
-            small
-          >
-            {{ locale }}
-          </v-btn>
+        <template v-for="locale in $i18n.locales">
+          <v-tooltip :key="locale.code" bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                :value="locale.code"
+                min-width="42"
+                small
+                v-bind="attrs"
+                v-on="on"
+              >
+                {{ locale.code }}
+              </v-btn>
+            </template>
+            <span>{{ locale.name }}</span>
+          </v-tooltip>
         </template>
       </v-btn-toggle>
     </v-app-bar>
@@ -35,16 +40,18 @@
         nav
       >
         <v-list-item
+          v-for="item in navItems"
+          :key="item.title"
           color="light-blue"
           link
           nuxt
-          :to="localePath('/')"
+          :to="localePath( item.link )"
         >
           <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>{{ $t( 'nav.' + item.title ) }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -78,7 +85,7 @@
           <v-icon>mdi-github</v-icon>
         </v-btn>
       </template>
-      <span>View on GitHub</span>
+      <span>{{ $t( 'View on GitHub' ) }}</span>
     </v-tooltip>
   </v-app>
 </template>
@@ -86,7 +93,11 @@
 <script>
   export default {
     data: () => ({
-      drawer: false
+      drawer: false,
+      navItems: [
+        { title: 'home', icon: 'mdi-home', link: '/' },
+        { title: 'blog', icon: 'mdi-post', link: '' }
+      ]
     }),
     computed: {
       locale: {

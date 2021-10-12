@@ -67,8 +67,17 @@ const config = {
   },
 
   i18n: {
-    locales: [ 'en', 'ja' ],
-    defaultLocale: 'en'
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'ja', iso: 'ja-JP', file: 'ja.json', name: '日本語' }
+    ],
+    defaultLocale: 'en',
+    langDir: '~/locales/',
+    lazy: true,
+    vueI18n: {
+      fallbackLocale: 'en',
+      formatFallbackMessages: true
+    }
   }
 }
 
