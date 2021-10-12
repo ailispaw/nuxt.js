@@ -44,8 +44,10 @@
           :key="item.title"
           color="light-blue"
           link
-          nuxt
-          :to="localePath( item.link )"
+          :nuxt="item.nuxt"
+          :to="item.nuxt ? localePath( item.link ) : undefined"
+          :href="item.nuxt ? undefined : item.link"
+          :target="item.nuxt ? undefined : '_blank'"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -95,8 +97,8 @@
     data: () => ({
       drawer: false,
       navItems: [
-        { title: 'home', icon: 'mdi-home', link: '/' },
-        { title: 'blog', icon: 'mdi-post', link: '' }
+        { title: 'home', icon: 'mdi-home', link: '/', nuxt: true },
+        { title: 'blog', icon: 'mdi-post', link: 'https://ailis.paw.zone/' }
       ]
     }),
     computed: {
