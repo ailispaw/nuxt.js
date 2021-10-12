@@ -1,8 +1,6 @@
 <template>
   <v-row>
     <v-col>
-      <AiSLogo />
-      
       <v-card>
         <v-list>
           <v-list-item v-for="entry in entries" :key="entry.title">
