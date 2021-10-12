@@ -59,10 +59,3 @@ npm install --save-dev @nuxtjs/pwa
 ```
 npm install --save-dev @nuxtjs/i18n
 ```
-
-## Add GitHub icon
-- https://vuetifyjs.com/en/features/icon-fonts/#font-awesome-5-icons
-
-```
-npm install --save-dev @fortawesome/fontawesome-free
-```

@@ -31,9 +31,7 @@ const config = {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // https://www.contentful.com/developers/docs/javascript/tutorials/integrate-contentful-with-vue-and-nuxt/
-    { src: '~/plugins/contentful.js' },
-    // https://vuetifyjs.com/en/features/icon-fonts/#font-awesome-5-icons
-    { src: '~/plugins/vuetify.js' }
+    { src: '~/plugins/contentful.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -69,8 +67,17 @@ const config = {
   },
 
   i18n: {
-    locales: [ 'en', 'ja' ],
-    defaultLocale: 'en'
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'ja', iso: 'ja-JP', file: 'ja.json', name: '日本語' }
+    ],
+    defaultLocale: 'en',
+    langDir: '~/locales/',
+    lazy: true,
+    vueI18n: {
+      fallbackLocale: 'en',
+      formatFallbackMessages: true
+    }
   }
 }
 
