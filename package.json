@@ -15,6 +15,7 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@nuxt/image": "^0.6.0",
     "@nuxtjs/i18n": "^7.0.3",
     "@nuxtjs/pwa": "^3.3.5",
