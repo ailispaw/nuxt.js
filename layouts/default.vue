@@ -10,6 +10,7 @@
       <v-spacer></v-spacer>
       <v-btn-toggle
         v-model="locale"
+        color="light-blue"
         dense
         mandatory
         rounded
@@ -29,10 +30,21 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app clipped stateless width="128">
-      <v-list nav>
-        <v-list-item link>
+      <v-list
+        dense
+        nav
+      >
+        <v-list-item
+          color="light-blue"
+          link
+          nuxt
+          :to="localePath('/')"
+        >
+          <v-list-item-icon>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title><nuxt-link :to="localePath('/')">Home</nuxt-link></v-list-item-title>
+            <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -54,6 +66,7 @@
           class="github"
           href="https://github.com/ailispaw/nuxt.js"
           target="_blank"
+          color="blue"
           fab
           fixed
           bottom
@@ -89,14 +102,11 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '~/assets/css/main.scss';
-
-  .v-btn-toggle {
-    color: #{$logo-top-color} !important;
+  .v-navigation-drawer .v-list-item__icon {
+    margin-right: 8px !important;
   }
 
   .v-btn.github {
-    background-color: #{$logo-bottom-color} !important;
     color: #fff !important;
   }
 </style>
