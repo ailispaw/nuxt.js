@@ -66,6 +66,7 @@ const config = {
     treeShake: true
   },
 
+  // https://i18n.nuxtjs.org/options-reference
   i18n: {
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
@@ -75,8 +76,11 @@ const config = {
     langDir: '~/locales/',
     lazy: true,
     vueI18n: {
+      // https://vue-i18n.intlify.dev/guide/essentials/fallback.html
       fallbackLocale: 'en',
-      formatFallbackMessages: true
+      formatFallbackMessages: true,
+      silentFallbackWarn: true,
+      silentTranslationWarn: true
     }
   }
 }
