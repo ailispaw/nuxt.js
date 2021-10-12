@@ -3,7 +3,7 @@
     <v-app-bar app dense clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <nuxt-link :to="localePath('/')">
-        <v-layout align-end>
+        <v-layout align-center>
           <AiSLogo-48 />
         </v-layout>
       </nuxt-link>
